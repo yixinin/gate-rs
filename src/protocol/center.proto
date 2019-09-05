@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package message;
+
+service Gate2Center {
+    rpc Gate2CenterMessage (Gate2CenterRequest) returns (Gate2CenterResponse);
+  }
+  
+  message Gate2CenterRequest {
+        int64 user_id = 1; //用户id
+        bytes message = 2; //消息体
+  }
+
+  message Gate2CenterResponse{
+      bool can = 1;
+  }
+
+
+service Center2Gate{
+    rpc Center2GateMessage (Center2GateRequest) returns (Center2GateResponse);
+}
+
+message Center2GateRequest{
+    repeated    int64 user_id   = 1;  //需要转发的用户id
+    bytes message               = 2;  //消息
+}
+
+message Center2GateResponse{
+    repeated int64 user_id = 1;  //成功的用户id
+}

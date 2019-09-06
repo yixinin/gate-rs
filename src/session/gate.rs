@@ -8,6 +8,7 @@ use crate::session::room_state::RoomState;
 use crate::session::ChannelMessage;
 use crossbeam_channel::Receiver;
 use crossbeam_channel::*;
+use crate::config::AppConfig;
 
 use crate::protocol::packet;
 // use libc::recv;
@@ -18,6 +19,7 @@ pub struct Gate {
     pub client_state: ClientState,
     pub center_state: CenterState,
     pub room_state: RoomState,
+    pub config : AppConfig,
 }
 impl Gate {
     pub fn listen(&mut self, clients_channel: Receiver<ChannelMessage>) {
@@ -47,7 +49,7 @@ impl Gate {
 
     pub fn on_message(&self, cid: u32, message: &ClientMessage) {
         match message {
-            ClientMessage::HeartBeat => self.heart_beat(cid),
+            ClientMessage::HeartBeat(buf) => self.heart_beat(cid),
             ClientMessage::Leave => self.on_logout(cid),
             ClientMessage::Login(buf) => self.on_login(cid, buf),
             _=>(),

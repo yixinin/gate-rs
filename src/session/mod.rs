@@ -6,3 +6,4 @@ pub mod client_state;
 pub mod gate;
 pub mod room_state;
 pub mod center_state;
+pub mod connection;

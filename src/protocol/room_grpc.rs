@@ -18,7 +18,7 @@
 #![allow(unused_imports)]
 #![allow(unused_results)]
 
-const METHOD_GATE2_ROOM_GATE2_ROOM_MESSAGE: ::grpcio::Method<super::room::Gate2RoomRequest, super::room::Gate2RoomResponse> = ::grpcio::Method {
+const METHOD_GATE2_ROOM_GATE2_ROOM_MESSAGE: ::grpcio::Method<super::room::Gate2RoomReq, super::room::Gate2RoomAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
     name: "/message.Gate2Room/Gate2RoomMessage",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
@@ -37,19 +37,19 @@ impl Gate2RoomClient {
         }
     }
 
-    pub fn gate2_room_message_opt(&self, req: &super::room::Gate2RoomRequest, opt: ::grpcio::CallOption) -> ::grpcio::Result<super::room::Gate2RoomResponse> {
+    pub fn gate2_room_message_opt(&self, req: &super::room::Gate2RoomReq, opt: ::grpcio::CallOption) -> ::grpcio::Result<super::room::Gate2RoomAck> {
         self.client.unary_call(&METHOD_GATE2_ROOM_GATE2_ROOM_MESSAGE, req, opt)
     }
 
-    pub fn gate2_room_message(&self, req: &super::room::Gate2RoomRequest) -> ::grpcio::Result<super::room::Gate2RoomResponse> {
+    pub fn gate2_room_message(&self, req: &super::room::Gate2RoomReq) -> ::grpcio::Result<super::room::Gate2RoomAck> {
         self.gate2_room_message_opt(req, ::grpcio::CallOption::default())
     }
 
-    pub fn gate2_room_message_async_opt(&self, req: &super::room::Gate2RoomRequest, opt: ::grpcio::CallOption) -> ::grpcio::Result<::grpcio::ClientUnaryReceiver<super::room::Gate2RoomResponse>> {
+    pub fn gate2_room_message_async_opt(&self, req: &super::room::Gate2RoomReq, opt: ::grpcio::CallOption) -> ::grpcio::Result<::grpcio::ClientUnaryReceiver<super::room::Gate2RoomAck>> {
         self.client.unary_call_async(&METHOD_GATE2_ROOM_GATE2_ROOM_MESSAGE, req, opt)
     }
 
-    pub fn gate2_room_message_async(&self, req: &super::room::Gate2RoomRequest) -> ::grpcio::Result<::grpcio::ClientUnaryReceiver<super::room::Gate2RoomResponse>> {
+    pub fn gate2_room_message_async(&self, req: &super::room::Gate2RoomReq) -> ::grpcio::Result<::grpcio::ClientUnaryReceiver<super::room::Gate2RoomAck>> {
         self.gate2_room_message_async_opt(req, ::grpcio::CallOption::default())
     }
     pub fn spawn<F>(&self, f: F) where F: ::futures::Future<Item = (), Error = ()> + Send + 'static {
@@ -58,7 +58,7 @@ impl Gate2RoomClient {
 }
 
 pub trait Gate2Room {
-    fn gate2_room_message(&mut self, ctx: ::grpcio::RpcContext, req: super::room::Gate2RoomRequest, sink: ::grpcio::UnarySink<super::room::Gate2RoomResponse>);
+    fn gate2_room_message(&mut self, ctx: ::grpcio::RpcContext, req: super::room::Gate2RoomReq, sink: ::grpcio::UnarySink<super::room::Gate2RoomAck>);
 }
 
 pub fn create_gate2_room<S: Gate2Room + Send + Clone + 'static>(s: S) -> ::grpcio::Service {
@@ -70,7 +70,7 @@ pub fn create_gate2_room<S: Gate2Room + Send + Clone + 'static>(s: S) -> ::grpci
     builder.build()
 }
 
-const METHOD_ROOM2_GATE_ROOM2_GATE_MESSAGE: ::grpcio::Method<super::room::Room2GateRequest, super::room::Room2GateResponse> = ::grpcio::Method {
+const METHOD_ROOM2_GATE_ROOM2_GATE_MESSAGE: ::grpcio::Method<super::room::Room2GateReq, super::room::Room2GateAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
     name: "/message.Room2Gate/Room2GateMessage",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
@@ -89,19 +89,19 @@ impl Room2GateClient {
         }
     }
 
-    pub fn room2_gate_message_opt(&self, req: &super::room::Room2GateRequest, opt: ::grpcio::CallOption) -> ::grpcio::Result<super::room::Room2GateResponse> {
+    pub fn room2_gate_message_opt(&self, req: &super::room::Room2GateReq, opt: ::grpcio::CallOption) -> ::grpcio::Result<super::room::Room2GateAck> {
         self.client.unary_call(&METHOD_ROOM2_GATE_ROOM2_GATE_MESSAGE, req, opt)
     }
 
-    pub fn room2_gate_message(&self, req: &super::room::Room2GateRequest) -> ::grpcio::Result<super::room::Room2GateResponse> {
+    pub fn room2_gate_message(&self, req: &super::room::Room2GateReq) -> ::grpcio::Result<super::room::Room2GateAck> {
         self.room2_gate_message_opt(req, ::grpcio::CallOption::default())
     }
 
-    pub fn room2_gate_message_async_opt(&self, req: &super::room::Room2GateRequest, opt: ::grpcio::CallOption) -> ::grpcio::Result<::grpcio::ClientUnaryReceiver<super::room::Room2GateResponse>> {
+    pub fn room2_gate_message_async_opt(&self, req: &super::room::Room2GateReq, opt: ::grpcio::CallOption) -> ::grpcio::Result<::grpcio::ClientUnaryReceiver<super::room::Room2GateAck>> {
         self.client.unary_call_async(&METHOD_ROOM2_GATE_ROOM2_GATE_MESSAGE, req, opt)
     }
 
-    pub fn room2_gate_message_async(&self, req: &super::room::Room2GateRequest) -> ::grpcio::Result<::grpcio::ClientUnaryReceiver<super::room::Room2GateResponse>> {
+    pub fn room2_gate_message_async(&self, req: &super::room::Room2GateReq) -> ::grpcio::Result<::grpcio::ClientUnaryReceiver<super::room::Room2GateAck>> {
         self.room2_gate_message_async_opt(req, ::grpcio::CallOption::default())
     }
     pub fn spawn<F>(&self, f: F) where F: ::futures::Future<Item = (), Error = ()> + Send + 'static {
@@ -110,7 +110,7 @@ impl Room2GateClient {
 }
 
 pub trait Room2Gate {
-    fn room2_gate_message(&mut self, ctx: ::grpcio::RpcContext, req: super::room::Room2GateRequest, sink: ::grpcio::UnarySink<super::room::Room2GateResponse>);
+    fn room2_gate_message(&mut self, ctx: ::grpcio::RpcContext, req: super::room::Room2GateReq, sink: ::grpcio::UnarySink<super::room::Room2GateAck>);
 }
 
 pub fn create_room2_gate<S: Room2Gate + Send + Clone + 'static>(s: S) -> ::grpcio::Service {
@@ -121,4 +121,3 @@ pub fn create_room2_gate<S: Room2Gate + Send + Clone + 'static>(s: S) -> ::grpci
     });
     builder.build()
 }
- 

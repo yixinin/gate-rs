@@ -27,7 +27,7 @@ use protobuf::ProtobufEnum as ProtobufEnum_imported_for_functions;
 const _PROTOBUF_VERSION_CHECK: () = ::protobuf::VERSION_2_8_0;
 
 #[derive(PartialEq,Clone,Default)]
-pub struct Gate2RoomRequest {
+pub struct Gate2RoomReq {
     // message fields
     pub user_id: i64,
     pub message: ::std::vec::Vec<u8>,
@@ -36,14 +36,14 @@ pub struct Gate2RoomRequest {
     pub cached_size: ::protobuf::CachedSize,
 }
 
-impl<'a> ::std::default::Default for &'a Gate2RoomRequest {
-    fn default() -> &'a Gate2RoomRequest {
-        <Gate2RoomRequest as ::protobuf::Message>::default_instance()
+impl<'a> ::std::default::Default for &'a Gate2RoomReq {
+    fn default() -> &'a Gate2RoomReq {
+        <Gate2RoomReq as ::protobuf::Message>::default_instance()
     }
 }
 
-impl Gate2RoomRequest {
-    pub fn new() -> Gate2RoomRequest {
+impl Gate2RoomReq {
+    pub fn new() -> Gate2RoomReq {
         ::std::default::Default::default()
     }
 
@@ -89,7 +89,7 @@ impl Gate2RoomRequest {
     }
 }
 
-impl ::protobuf::Message for Gate2RoomRequest {
+impl ::protobuf::Message for Gate2RoomReq {
     fn is_initialized(&self) -> bool {
         true
     }
@@ -168,8 +168,8 @@ impl ::protobuf::Message for Gate2RoomRequest {
         Self::descriptor_static()
     }
 
-    fn new() -> Gate2RoomRequest {
-        Gate2RoomRequest::new()
+    fn new() -> Gate2RoomReq {
+        Gate2RoomReq::new()
     }
 
     fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
@@ -182,16 +182,16 @@ impl ::protobuf::Message for Gate2RoomRequest {
                 let mut fields = ::std::vec::Vec::new();
                 fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeInt64>(
                     "user_id",
-                    |m: &Gate2RoomRequest| { &m.user_id },
-                    |m: &mut Gate2RoomRequest| { &mut m.user_id },
+                    |m: &Gate2RoomReq| { &m.user_id },
+                    |m: &mut Gate2RoomReq| { &mut m.user_id },
                 ));
                 fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
                     "message",
-                    |m: &Gate2RoomRequest| { &m.message },
-                    |m: &mut Gate2RoomRequest| { &mut m.message },
+                    |m: &Gate2RoomReq| { &m.message },
+                    |m: &mut Gate2RoomReq| { &mut m.message },
                 ));
-                ::protobuf::reflect::MessageDescriptor::new::<Gate2RoomRequest>(
-                    "Gate2RoomRequest",
+                ::protobuf::reflect::MessageDescriptor::new::<Gate2RoomReq>(
+                    "Gate2RoomReq",
                     fields,
                     file_descriptor_proto()
                 )
@@ -199,18 +199,18 @@ impl ::protobuf::Message for Gate2RoomRequest {
         }
     }
 
-    fn default_instance() -> &'static Gate2RoomRequest {
-        static mut instance: ::protobuf::lazy::Lazy<Gate2RoomRequest> = ::protobuf::lazy::Lazy {
+    fn default_instance() -> &'static Gate2RoomReq {
+        static mut instance: ::protobuf::lazy::Lazy<Gate2RoomReq> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const Gate2RoomRequest,
+            ptr: 0 as *const Gate2RoomReq,
         };
         unsafe {
-            instance.get(Gate2RoomRequest::new)
+            instance.get(Gate2RoomReq::new)
         }
     }
 }
 
-impl ::protobuf::Clear for Gate2RoomRequest {
+impl ::protobuf::Clear for Gate2RoomReq {
     fn clear(&mut self) {
         self.user_id = 0;
         self.message.clear();
@@ -218,20 +218,20 @@ impl ::protobuf::Clear for Gate2RoomRequest {
     }
 }
 
-impl ::std::fmt::Debug for Gate2RoomRequest {
+impl ::std::fmt::Debug for Gate2RoomReq {
     fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
         ::protobuf::text_format::fmt(self, f)
     }
 }
 
-impl ::protobuf::reflect::ProtobufValue for Gate2RoomRequest {
+impl ::protobuf::reflect::ProtobufValue for Gate2RoomReq {
     fn as_ref(&self) -> ::protobuf::reflect::ProtobufValueRef {
         ::protobuf::reflect::ProtobufValueRef::Message(self)
     }
 }
 
 #[derive(PartialEq,Clone,Default)]
-pub struct Gate2RoomResponse {
+pub struct Gate2RoomAck {
     // message fields
     pub can: bool,
     // special fields
@@ -239,14 +239,14 @@ pub struct Gate2RoomResponse {
     pub cached_size: ::protobuf::CachedSize,
 }
 
-impl<'a> ::std::default::Default for &'a Gate2RoomResponse {
-    fn default() -> &'a Gate2RoomResponse {
-        <Gate2RoomResponse as ::protobuf::Message>::default_instance()
+impl<'a> ::std::default::Default for &'a Gate2RoomAck {
+    fn default() -> &'a Gate2RoomAck {
+        <Gate2RoomAck as ::protobuf::Message>::default_instance()
     }
 }
 
-impl Gate2RoomResponse {
-    pub fn new() -> Gate2RoomResponse {
+impl Gate2RoomAck {
+    pub fn new() -> Gate2RoomAck {
         ::std::default::Default::default()
     }
 
@@ -266,7 +266,7 @@ impl Gate2RoomResponse {
     }
 }
 
-impl ::protobuf::Message for Gate2RoomResponse {
+impl ::protobuf::Message for Gate2RoomAck {
     fn is_initialized(&self) -> bool {
         true
     }
@@ -336,8 +336,8 @@ impl ::protobuf::Message for Gate2RoomResponse {
         Self::descriptor_static()
     }
 
-    fn new() -> Gate2RoomResponse {
-        Gate2RoomResponse::new()
+    fn new() -> Gate2RoomAck {
+        Gate2RoomAck::new()
     }
 
     fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
@@ -350,11 +350,11 @@ impl ::protobuf::Message for Gate2RoomResponse {
                 let mut fields = ::std::vec::Vec::new();
                 fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBool>(
                     "can",
-                    |m: &Gate2RoomResponse| { &m.can },
-                    |m: &mut Gate2RoomResponse| { &mut m.can },
+                    |m: &Gate2RoomAck| { &m.can },
+                    |m: &mut Gate2RoomAck| { &mut m.can },
                 ));
-                ::protobuf::reflect::MessageDescriptor::new::<Gate2RoomResponse>(
-                    "Gate2RoomResponse",
+                ::protobuf::reflect::MessageDescriptor::new::<Gate2RoomAck>(
+                    "Gate2RoomAck",
                     fields,
                     file_descriptor_proto()
                 )
@@ -362,38 +362,38 @@ impl ::protobuf::Message for Gate2RoomResponse {
         }
     }
 
-    fn default_instance() -> &'static Gate2RoomResponse {
-        static mut instance: ::protobuf::lazy::Lazy<Gate2RoomResponse> = ::protobuf::lazy::Lazy {
+    fn default_instance() -> &'static Gate2RoomAck {
+        static mut instance: ::protobuf::lazy::Lazy<Gate2RoomAck> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const Gate2RoomResponse,
+            ptr: 0 as *const Gate2RoomAck,
         };
         unsafe {
-            instance.get(Gate2RoomResponse::new)
+            instance.get(Gate2RoomAck::new)
         }
     }
 }
 
-impl ::protobuf::Clear for Gate2RoomResponse {
+impl ::protobuf::Clear for Gate2RoomAck {
     fn clear(&mut self) {
         self.can = false;
         self.unknown_fields.clear();
     }
 }
 
-impl ::std::fmt::Debug for Gate2RoomResponse {
+impl ::std::fmt::Debug for Gate2RoomAck {
     fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
         ::protobuf::text_format::fmt(self, f)
     }
 }
 
-impl ::protobuf::reflect::ProtobufValue for Gate2RoomResponse {
+impl ::protobuf::reflect::ProtobufValue for Gate2RoomAck {
     fn as_ref(&self) -> ::protobuf::reflect::ProtobufValueRef {
         ::protobuf::reflect::ProtobufValueRef::Message(self)
     }
 }
 
 #[derive(PartialEq,Clone,Default)]
-pub struct Room2GateRequest {
+pub struct Room2GateReq {
     // message fields
     pub user_id: ::std::vec::Vec<i64>,
     pub message: ::std::vec::Vec<u8>,
@@ -402,14 +402,14 @@ pub struct Room2GateRequest {
     pub cached_size: ::protobuf::CachedSize,
 }
 
-impl<'a> ::std::default::Default for &'a Room2GateRequest {
-    fn default() -> &'a Room2GateRequest {
-        <Room2GateRequest as ::protobuf::Message>::default_instance()
+impl<'a> ::std::default::Default for &'a Room2GateReq {
+    fn default() -> &'a Room2GateReq {
+        <Room2GateReq as ::protobuf::Message>::default_instance()
     }
 }
 
-impl Room2GateRequest {
-    pub fn new() -> Room2GateRequest {
+impl Room2GateReq {
+    pub fn new() -> Room2GateReq {
         ::std::default::Default::default()
     }
 
@@ -465,7 +465,7 @@ impl Room2GateRequest {
     }
 }
 
-impl ::protobuf::Message for Room2GateRequest {
+impl ::protobuf::Message for Room2GateReq {
     fn is_initialized(&self) -> bool {
         true
     }
@@ -540,8 +540,8 @@ impl ::protobuf::Message for Room2GateRequest {
         Self::descriptor_static()
     }
 
-    fn new() -> Room2GateRequest {
-        Room2GateRequest::new()
+    fn new() -> Room2GateReq {
+        Room2GateReq::new()
     }
 
     fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
@@ -554,16 +554,16 @@ impl ::protobuf::Message for Room2GateRequest {
                 let mut fields = ::std::vec::Vec::new();
                 fields.push(::protobuf::reflect::accessor::make_vec_accessor::<_, ::protobuf::types::ProtobufTypeInt64>(
                     "user_id",
-                    |m: &Room2GateRequest| { &m.user_id },
-                    |m: &mut Room2GateRequest| { &mut m.user_id },
+                    |m: &Room2GateReq| { &m.user_id },
+                    |m: &mut Room2GateReq| { &mut m.user_id },
                 ));
                 fields.push(::protobuf::reflect::accessor::make_simple_field_accessor::<_, ::protobuf::types::ProtobufTypeBytes>(
                     "message",
-                    |m: &Room2GateRequest| { &m.message },
-                    |m: &mut Room2GateRequest| { &mut m.message },
+                    |m: &Room2GateReq| { &m.message },
+                    |m: &mut Room2GateReq| { &mut m.message },
                 ));
-                ::protobuf::reflect::MessageDescriptor::new::<Room2GateRequest>(
-                    "Room2GateRequest",
+                ::protobuf::reflect::MessageDescriptor::new::<Room2GateReq>(
+                    "Room2GateReq",
                     fields,
                     file_descriptor_proto()
                 )
@@ -571,18 +571,18 @@ impl ::protobuf::Message for Room2GateRequest {
         }
     }
 
-    fn default_instance() -> &'static Room2GateRequest {
-        static mut instance: ::protobuf::lazy::Lazy<Room2GateRequest> = ::protobuf::lazy::Lazy {
+    fn default_instance() -> &'static Room2GateReq {
+        static mut instance: ::protobuf::lazy::Lazy<Room2GateReq> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const Room2GateRequest,
+            ptr: 0 as *const Room2GateReq,
         };
         unsafe {
-            instance.get(Room2GateRequest::new)
+            instance.get(Room2GateReq::new)
         }
     }
 }
 
-impl ::protobuf::Clear for Room2GateRequest {
+impl ::protobuf::Clear for Room2GateReq {
     fn clear(&mut self) {
         self.user_id.clear();
         self.message.clear();
@@ -590,20 +590,20 @@ impl ::protobuf::Clear for Room2GateRequest {
     }
 }
 
-impl ::std::fmt::Debug for Room2GateRequest {
+impl ::std::fmt::Debug for Room2GateReq {
     fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
         ::protobuf::text_format::fmt(self, f)
     }
 }
 
-impl ::protobuf::reflect::ProtobufValue for Room2GateRequest {
+impl ::protobuf::reflect::ProtobufValue for Room2GateReq {
     fn as_ref(&self) -> ::protobuf::reflect::ProtobufValueRef {
         ::protobuf::reflect::ProtobufValueRef::Message(self)
     }
 }
 
 #[derive(PartialEq,Clone,Default)]
-pub struct Room2GateResponse {
+pub struct Room2GateAck {
     // message fields
     pub user_id: ::std::vec::Vec<i64>,
     // special fields
@@ -611,14 +611,14 @@ pub struct Room2GateResponse {
     pub cached_size: ::protobuf::CachedSize,
 }
 
-impl<'a> ::std::default::Default for &'a Room2GateResponse {
-    fn default() -> &'a Room2GateResponse {
-        <Room2GateResponse as ::protobuf::Message>::default_instance()
+impl<'a> ::std::default::Default for &'a Room2GateAck {
+    fn default() -> &'a Room2GateAck {
+        <Room2GateAck as ::protobuf::Message>::default_instance()
     }
 }
 
-impl Room2GateResponse {
-    pub fn new() -> Room2GateResponse {
+impl Room2GateAck {
+    pub fn new() -> Room2GateAck {
         ::std::default::Default::default()
     }
 
@@ -648,7 +648,7 @@ impl Room2GateResponse {
     }
 }
 
-impl ::protobuf::Message for Room2GateResponse {
+impl ::protobuf::Message for Room2GateAck {
     fn is_initialized(&self) -> bool {
         true
     }
@@ -714,8 +714,8 @@ impl ::protobuf::Message for Room2GateResponse {
         Self::descriptor_static()
     }
 
-    fn new() -> Room2GateResponse {
-        Room2GateResponse::new()
+    fn new() -> Room2GateAck {
+        Room2GateAck::new()
     }
 
     fn descriptor_static() -> &'static ::protobuf::reflect::MessageDescriptor {
@@ -728,11 +728,11 @@ impl ::protobuf::Message for Room2GateResponse {
                 let mut fields = ::std::vec::Vec::new();
                 fields.push(::protobuf::reflect::accessor::make_vec_accessor::<_, ::protobuf::types::ProtobufTypeInt64>(
                     "user_id",
-                    |m: &Room2GateResponse| { &m.user_id },
-                    |m: &mut Room2GateResponse| { &mut m.user_id },
+                    |m: &Room2GateAck| { &m.user_id },
+                    |m: &mut Room2GateAck| { &mut m.user_id },
                 ));
-                ::protobuf::reflect::MessageDescriptor::new::<Room2GateResponse>(
-                    "Room2GateResponse",
+                ::protobuf::reflect::MessageDescriptor::new::<Room2GateAck>(
+                    "Room2GateAck",
                     fields,
                     file_descriptor_proto()
                 )
@@ -740,83 +740,87 @@ impl ::protobuf::Message for Room2GateResponse {
         }
     }
 
-    fn default_instance() -> &'static Room2GateResponse {
-        static mut instance: ::protobuf::lazy::Lazy<Room2GateResponse> = ::protobuf::lazy::Lazy {
+    fn default_instance() -> &'static Room2GateAck {
+        static mut instance: ::protobuf::lazy::Lazy<Room2GateAck> = ::protobuf::lazy::Lazy {
             lock: ::protobuf::lazy::ONCE_INIT,
-            ptr: 0 as *const Room2GateResponse,
+            ptr: 0 as *const Room2GateAck,
         };
         unsafe {
-            instance.get(Room2GateResponse::new)
+            instance.get(Room2GateAck::new)
         }
     }
 }
 
-impl ::protobuf::Clear for Room2GateResponse {
+impl ::protobuf::Clear for Room2GateAck {
     fn clear(&mut self) {
         self.user_id.clear();
         self.unknown_fields.clear();
     }
 }
 
-impl ::std::fmt::Debug for Room2GateResponse {
+impl ::std::fmt::Debug for Room2GateAck {
     fn fmt(&self, f: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
         ::protobuf::text_format::fmt(self, f)
     }
 }
 
-impl ::protobuf::reflect::ProtobufValue for Room2GateResponse {
+impl ::protobuf::reflect::ProtobufValue for Room2GateAck {
     fn as_ref(&self) -> ::protobuf::reflect::ProtobufValueRef {
         ::protobuf::reflect::ProtobufValueRef::Message(self)
     }
 }
 
 static file_descriptor_proto_data: &'static [u8] = b"\
-    \n\nroom.proto\x12\x07message\"E\n\x10Gate2RoomRequest\x12\x17\n\x07user\
-    _id\x18\x01\x20\x01(\x03R\x06userId\x12\x18\n\x07message\x18\x02\x20\x01\
-    (\x0cR\x07message\"%\n\x11Gate2RoomResponse\x12\x10\n\x03can\x18\x01\x20\
-    \x01(\x08R\x03can\"E\n\x10Room2GateRequest\x12\x17\n\x07user_id\x18\x01\
-    \x20\x03(\x03R\x06userId\x12\x18\n\x07message\x18\x02\x20\x01(\x0cR\x07m\
-    essage\",\n\x11Room2GateResponse\x12\x17\n\x07user_id\x18\x01\x20\x03(\
-    \x03R\x06userId2V\n\tGate2Room\x12I\n\x10Gate2RoomMessage\x12\x19.messag\
-    e.Gate2RoomRequest\x1a\x1a.message.Gate2RoomResponse2V\n\tRoom2Gate\x12I\
-    \n\x10Room2GateMessage\x12\x19.message.Room2GateRequest\x1a\x1a.message.\
-    Room2GateResponseJ\xfc\x05\n\x06\x12\x04\0\0\x1e\x01\n\x08\n\x01\x0c\x12\
-    \x03\0\0\x12\n\x08\n\x01\x02\x12\x03\x02\x08\x0f\n\n\n\x02\x06\0\x12\x04\
-    \x04\0\x06\x03\n\n\n\x03\x06\0\x01\x12\x03\x04\x08\x11\n\x0b\n\x04\x06\0\
-    \x02\0\x12\x03\x05\x04H\n\x0c\n\x05\x06\0\x02\0\x01\x12\x03\x05\x08\x18\
-    \n\x0c\n\x05\x06\0\x02\0\x02\x12\x03\x05\x1a*\n\x0c\n\x05\x06\0\x02\0\
-    \x03\x12\x03\x055F\n\n\n\x02\x04\0\x12\x04\x08\x02\x0b\x03\n\n\n\x03\x04\
-    \0\x01\x12\x03\x08\n\x1a\n\x0b\n\x04\x04\0\x02\0\x12\x03\t\x05\x17\n\r\n\
-    \x05\x04\0\x02\0\x04\x12\x04\t\x05\x08\x1c\n\x0c\n\x05\x04\0\x02\0\x05\
-    \x12\x03\t\x05\n\n\x0c\n\x05\x04\0\x02\0\x01\x12\x03\t\x0b\x12\n\x0c\n\
-    \x05\x04\0\x02\0\x03\x12\x03\t\x15\x16\n\x0b\n\x04\x04\0\x02\x01\x12\x03\
-    \n\x05\x17\n\r\n\x05\x04\0\x02\x01\x04\x12\x04\n\x05\t\x17\n\x0c\n\x05\
-    \x04\0\x02\x01\x05\x12\x03\n\x05\n\n\x0c\n\x05\x04\0\x02\x01\x01\x12\x03\
-    \n\x0b\x12\n\x0c\n\x05\x04\0\x02\x01\x03\x12\x03\n\x15\x16\n\n\n\x02\x04\
-    \x01\x12\x04\r\x02\x0f\x01\n\n\n\x03\x04\x01\x01\x12\x03\r\n\x1b\n\x0b\n\
-    \x04\x04\x01\x02\0\x12\x03\x0e\x04\x11\n\r\n\x05\x04\x01\x02\0\x04\x12\
-    \x04\x0e\x04\r\x1c\n\x0c\n\x05\x04\x01\x02\0\x05\x12\x03\x0e\x04\x08\n\
-    \x0c\n\x05\x04\x01\x02\0\x01\x12\x03\x0e\t\x0c\n\x0c\n\x05\x04\x01\x02\0\
-    \x03\x12\x03\x0e\x0f\x10\n\n\n\x02\x06\x01\x12\x04\x13\0\x15\x01\n\n\n\
-    \x03\x06\x01\x01\x12\x03\x13\x08\x11\n\x0b\n\x04\x06\x01\x02\0\x12\x03\
-    \x14\x04H\n\x0c\n\x05\x06\x01\x02\0\x01\x12\x03\x14\x08\x18\n\x0c\n\x05\
-    \x06\x01\x02\0\x02\x12\x03\x14\x1a*\n\x0c\n\x05\x06\x01\x02\0\x03\x12\
-    \x03\x145F\n\n\n\x02\x04\x02\x12\x04\x17\0\x1a\x01\n\n\n\x03\x04\x02\x01\
-    \x12\x03\x17\x08\x18\n&\n\x04\x04\x02\x02\0\x12\x03\x18\x04$\"\x19\xe9\
-    \x9c\x80\xe8\xa6\x81\xe8\xbd\xac\xe5\x8f\x91\xe7\x9a\x84\xe7\x94\xa8\xe6\
-    \x88\xb7id\r\n\n\x0c\n\x05\x04\x02\x02\0\x04\x12\x03\x18\x04\x0c\n\x0c\n\
-    \x05\x04\x02\x02\0\x05\x12\x03\x18\x10\x15\n\x0c\n\x05\x04\x02\x02\0\x01\
-    \x12\x03\x18\x16\x1d\n\x0c\n\x05\x04\x02\x02\0\x03\x12\x03\x18\"#\n\x15\
-    \n\x04\x04\x02\x02\x01\x12\x03\x19\x04$\"\x08\xe6\xb6\x88\xe6\x81\xaf\r\
-    \n\n\r\n\x05\x04\x02\x02\x01\x04\x12\x04\x19\x04\x18$\n\x0c\n\x05\x04\
-    \x02\x02\x01\x05\x12\x03\x19\x04\t\n\x0c\n\x05\x04\x02\x02\x01\x01\x12\
-    \x03\x19\x10\x17\n\x0c\n\x05\x04\x02\x02\x01\x03\x12\x03\x19\"#\n\n\n\
-    \x02\x04\x03\x12\x04\x1c\0\x1e\x01\n\n\n\x03\x04\x03\x01\x12\x03\x1c\x08\
-    \x19\n&\n\x04\x04\x03\x02\0\x12\x03\x1d\x04\"\"\x19\xe8\xbd\xac\xe5\x8f\
-    \x91\xe6\x88\x90\xe5\x8a\x9f\xe7\x9a\x84\xe7\x94\xa8\xe6\x88\xb7id\r\n\n\
-    \x0c\n\x05\x04\x03\x02\0\x04\x12\x03\x1d\x04\x0c\n\x0c\n\x05\x04\x03\x02\
-    \0\x05\x12\x03\x1d\x10\x15\n\x0c\n\x05\x04\x03\x02\0\x01\x12\x03\x1d\x16\
-    \x1d\n\x0c\n\x05\x04\x03\x02\0\x03\x12\x03\x1d\x20!b\x06proto3\
+    \n\nroom.proto\x12\x07message\"A\n\x0cGate2RoomReq\x12\x17\n\x07user_id\
+    \x18\x01\x20\x01(\x03R\x06userId\x12\x18\n\x07message\x18\x02\x20\x01(\
+    \x0cR\x07message\"\x20\n\x0cGate2RoomAck\x12\x10\n\x03can\x18\x01\x20\
+    \x01(\x08R\x03can\"A\n\x0cRoom2GateReq\x12\x17\n\x07user_id\x18\x01\x20\
+    \x03(\x03R\x06userId\x12\x18\n\x07message\x18\x02\x20\x01(\x0cR\x07messa\
+    ge\"'\n\x0cRoom2GateAck\x12\x17\n\x07user_id\x18\x01\x20\x03(\x03R\x06us\
+    erId2M\n\tGate2Room\x12@\n\x10Gate2RoomMessage\x12\x15.message.Gate2Room\
+    Req\x1a\x15.message.Gate2RoomAck2M\n\tRoom2Gate\x12@\n\x10Room2GateMessa\
+    ge\x12\x15.message.Room2GateReq\x1a\x15.message.Room2GateAckJ\xc1\x06\n\
+    \x06\x12\x04\0\0\x1c\x01\n\x08\n\x01\x0c\x12\x03\0\0\x12\n\x08\n\x01\x02\
+    \x12\x03\x02\x08\x0f\n\n\n\x02\x06\0\x12\x04\x04\0\x06\x01\n\n\n\x03\x06\
+    \0\x01\x12\x03\x04\x08\x11\n&\n\x04\x06\0\x02\0\x12\x03\x05\x02<\"\x19\
+    \x20\xe5\xae\xa2\xe6\x88\xb7\xe7\xab\xaf-\xe6\x88\xbf\xe9\x97\xb4\xe6\
+    \xb6\x88\xe6\x81\xaf\r\n\n\x0c\n\x05\x06\0\x02\0\x01\x12\x03\x05\x06\x16\
+    \n\x0c\n\x05\x06\0\x02\0\x02\x12\x03\x05\x17#\n\x0c\n\x05\x06\0\x02\0\
+    \x03\x12\x03\x05.:\n\n\n\x02\x04\0\x12\x04\x08\0\x0b\x01\n\n\n\x03\x04\0\
+    \x01\x12\x03\x08\x08\x14\n\x0b\n\x04\x04\0\x02\0\x12\x03\t\x02\x14\n\r\n\
+    \x05\x04\0\x02\0\x04\x12\x04\t\x02\x08\x16\n\x0c\n\x05\x04\0\x02\0\x05\
+    \x12\x03\t\x02\x07\n\x0c\n\x05\x04\0\x02\0\x01\x12\x03\t\x08\x0f\n\x0c\n\
+    \x05\x04\0\x02\0\x03\x12\x03\t\x12\x13\n\x0b\n\x04\x04\0\x02\x01\x12\x03\
+    \n\x02\x14\n\r\n\x05\x04\0\x02\x01\x04\x12\x04\n\x02\t\x14\n\x0c\n\x05\
+    \x04\0\x02\x01\x05\x12\x03\n\x02\x07\n\x0c\n\x05\x04\0\x02\x01\x01\x12\
+    \x03\n\x08\x0f\n\x0c\n\x05\x04\0\x02\x01\x03\x12\x03\n\x12\x13\n\n\n\x02\
+    \x04\x01\x12\x04\r\0\x0f\x01\n\n\n\x03\x04\x01\x01\x12\x03\r\x08\x14\n\
+    \x1b\n\x04\x04\x01\x02\0\x12\x03\x0e\x02\x0f\"\x0e\xe6\x98\xaf\xe5\x90\
+    \xa6\xe6\x88\x90\xe5\x8a\x9f\r\n\n\r\n\x05\x04\x01\x02\0\x04\x12\x04\x0e\
+    \x02\r\x16\n\x0c\n\x05\x04\x01\x02\0\x05\x12\x03\x0e\x02\x06\n\x0c\n\x05\
+    \x04\x01\x02\0\x01\x12\x03\x0e\x07\n\n\x0c\n\x05\x04\x01\x02\0\x03\x12\
+    \x03\x0e\r\x0e\n\n\n\x02\x06\x01\x12\x04\x11\0\x13\x01\n\n\n\x03\x06\x01\
+    \x01\x12\x03\x11\x08\x11\n%\n\x04\x06\x01\x02\0\x12\x03\x12\x02<\"\x18\
+    \xe6\x88\xbf\xe9\x97\xb4-\xe5\xae\xa2\xe6\x88\xb7\xe7\xab\xaf\xe6\xb6\
+    \x88\xe6\x81\xaf\r\n\n\x0c\n\x05\x06\x01\x02\0\x01\x12\x03\x12\x06\x16\n\
+    \x0c\n\x05\x06\x01\x02\0\x02\x12\x03\x12\x17#\n\x0c\n\x05\x06\x01\x02\0\
+    \x03\x12\x03\x12.:\n\n\n\x02\x04\x02\x12\x04\x15\0\x18\x01\n\n\n\x03\x04\
+    \x02\x01\x12\x03\x15\x08\x14\n&\n\x04\x04\x02\x02\0\x12\x03\x16\x02\x1d\
+    \"\x19\xe9\x9c\x80\xe8\xa6\x81\xe8\xbd\xac\xe5\x8f\x91\xe7\x9a\x84\xe7\
+    \x94\xa8\xe6\x88\xb7id\r\n\n\x0c\n\x05\x04\x02\x02\0\x04\x12\x03\x16\x02\
+    \n\n\x0c\n\x05\x04\x02\x02\0\x05\x12\x03\x16\x0b\x10\n\x0c\n\x05\x04\x02\
+    \x02\0\x01\x12\x03\x16\x11\x18\n\x0c\n\x05\x04\x02\x02\0\x03\x12\x03\x16\
+    \x1b\x1c\n\x15\n\x04\x04\x02\x02\x01\x12\x03\x17\x02\x14\"\x08\xe6\xb6\
+    \x88\xe6\x81\xaf\r\n\n\r\n\x05\x04\x02\x02\x01\x04\x12\x04\x17\x02\x16\
+    \x1d\n\x0c\n\x05\x04\x02\x02\x01\x05\x12\x03\x17\x02\x07\n\x0c\n\x05\x04\
+    \x02\x02\x01\x01\x12\x03\x17\x08\x0f\n\x0c\n\x05\x04\x02\x02\x01\x03\x12\
+    \x03\x17\x12\x13\n\n\n\x02\x04\x03\x12\x04\x1a\0\x1c\x01\n\n\n\x03\x04\
+    \x03\x01\x12\x03\x1a\x08\x14\n&\n\x04\x04\x03\x02\0\x12\x03\x1b\x02\x1d\
+    \"\x19\xe8\xbd\xac\xe5\x8f\x91\xe6\x88\x90\xe5\x8a\x9f\xe7\x9a\x84\xe7\
+    \x94\xa8\xe6\x88\xb7id\r\n\n\x0c\n\x05\x04\x03\x02\0\x04\x12\x03\x1b\x02\
+    \n\n\x0c\n\x05\x04\x03\x02\0\x05\x12\x03\x1b\x0b\x10\n\x0c\n\x05\x04\x03\
+    \x02\0\x01\x12\x03\x1b\x11\x18\n\x0c\n\x05\x04\x03\x02\0\x03\x12\x03\x1b\
+    \x1b\x1cb\x06proto3\
 ";
 
 static mut file_descriptor_proto_lazy: ::protobuf::lazy::Lazy<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::lazy::Lazy {

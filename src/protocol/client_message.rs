@@ -1,10 +1,10 @@
 #[derive(Debug, PartialEq)]
 pub enum ClientMessage {
-    Ping,
-    Buffer(Vec<u8>),
-    Login(Vec<u8>), // 登录
-    HeartBeat,      //心跳
-    Leave,          //离线
+    Buffer(Vec<u8>),    //数据包
+    Login(Vec<u8>),     //登录
+    HeartBeat(Vec<u8>), //心跳
+    Logout(Vec<u8>),     //离线
+    Leave, //断线
     Invalid,
 }
 

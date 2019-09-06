@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package head;
+// ---------------------公共头部
+message req_head {
+  int32 cid = 1;
+  string token = 2;
+}
+
+message ack_head {
+  int32 cid = 1;
+  int32 code = 2;
+  string message = 3;
+}
+
+message notify_head {
+  int32 cid = 1;
+  int32 code = 2;
+  string message = 3;
+}

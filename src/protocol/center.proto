@@ -1,30 +1,77 @@
 syntax = "proto3";
 
-package message;
+package center;
+
+import "head.proto";
 
 service Gate2Center {
-    rpc Gate2CenterMessage (Gate2CenterRequest) returns (Gate2CenterResponse);
-  }
-  
-  message Gate2CenterRequest {
-        int64 user_id = 1; //用户id
-        bytes message = 2; //消息体
-  }
-
-  message Gate2CenterResponse{
-      bool can = 1;
-  }
-
-
-service Center2Gate{
-    rpc Center2GateMessage (Center2GateRequest) returns (Center2GateResponse);
+  rpc Gate2CenterMessage(Gate2CenterReq)
+      returns (Gate2CenterAck);             //客户端 - 中心服务器
+  rpc Login(LoginReq) returns (LoginAck);   //客户端登录
+  rpc Logout(LoginAck) returns (LogoutAck); //客户端登出
+  rpc HeartBeat(HeartBeatReq) returns (HeartBeatAck); //心跳
 }
 
-message Center2GateRequest{
-    repeated    int64 user_id   = 1;  //需要转发的用户id
-    bytes message               = 2;  //消息
+message Gate2CenterReq {
+  int64 user_id = 1; //用户id
+  bytes message = 2; //消息体
 }
 
-message Center2GateResponse{
-    repeated int64 user_id = 1;  //成功的用户id
+message Gate2CenterAck {
+  bool can = 1; //执行结果
+}
+
+message LoginReq {
+  head.req_head head = 1; // token
+  int64 username = 2;     //用户名
+  string password = 3;    //密码
+  string verify_code = 4; //验证码
+  int32 login_type = 5;   //登录类型
+  string nickname = 6;    //昵称
+  string avatar = 7;      //头像
+  string invite_code = 8; //邀请码
+  string extra = 9;       //扩展字段
+}
+
+message LoginAck {
+  head.ack_head head = 1; // token
+}
+
+message LogoutReq {
+  head.req_head head = 1; // token
+}
+
+message LogoutAck {
+  head.ack_head head = 1; // token
+}
+
+message HeartBeatReq {
+  head.req_head head = 1; // token
+}
+
+message HeartBeatAck {
+  head.ack_head head = 1; // token
+}
+
+service Center2Gate {
+  rpc Center2GateMessage(Center2GateReq)
+      returns (Center2GateAck); //中心服务器-客户端
+  rpc KickUsers(CenterKickUserReq) returns (CenterKickUserAck); //踢出用户
+}
+
+message Center2GateReq {
+  repeated int64 user_id = 1; //需要转发的用户id
+  bytes message = 2;          //消息
+}
+
+message Center2GateAck {
+  repeated int64 user_id = 1; //成功的用户id
+}
+
+message CenterKickUserReq {
+  repeated int64 user_id = 1; //用户id
+}
+
+message CenterKickUserAck {
+  repeated int64 user_id = 1; //成功的用户id
 }

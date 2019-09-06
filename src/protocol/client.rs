@@ -27,8 +27,9 @@ use protobuf::ProtobufEnum as ProtobufEnum_imported_for_functions;
 const _PROTOBUF_VERSION_CHECK: () = ::protobuf::VERSION_2_8_0;
 
 static file_descriptor_proto_data: &'static [u8] = b"\
-    \n\x0cclient.proto\x12\x06clientJ\x1c\n\x06\x12\x04\0\0\x02\x0f\n\x08\n\
-    \x01\x0c\x12\x03\0\0\x12\n\x08\n\x01\x02\x12\x03\x02\x08\x0eb\x06proto3\
+    \n\x0cclient.proto\x12\x08protocolJ\x1c\n\x06\x12\x04\0\0\x02\x11\n\x08\
+    \n\x01\x0c\x12\x03\0\0\x12\n\x08\n\x01\x02\x12\x03\x02\x08\x10b\x06proto\
+    3\
 ";
 
 static mut file_descriptor_proto_lazy: ::protobuf::lazy::Lazy<::protobuf::descriptor::FileDescriptorProto> = ::protobuf::lazy::Lazy {

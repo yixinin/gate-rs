@@ -20,28 +20,28 @@
 
 const METHOD_GATE2_CENTER_GATE2_CENTER_MESSAGE: ::grpcio::Method<super::center::Gate2CenterReq, super::center::Gate2CenterAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
-    name: "/message.Gate2Center/Gate2CenterMessage",
+    name: "/protocol.Gate2Center/Gate2CenterMessage",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
     resp_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
 };
 
 const METHOD_GATE2_CENTER_LOGIN: ::grpcio::Method<super::center::LoginReq, super::center::LoginAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
-    name: "/message.Gate2Center/Login",
+    name: "/protocol.Gate2Center/Login",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
     resp_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
 };
 
 const METHOD_GATE2_CENTER_LOGOUT: ::grpcio::Method<super::center::LoginAck, super::center::LogoutAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
-    name: "/message.Gate2Center/Logout",
+    name: "/protocol.Gate2Center/Logout",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
     resp_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
 };
 
 const METHOD_GATE2_CENTER_HEART_BEAT: ::grpcio::Method<super::center::HeartBeatReq, super::center::HeartBeatAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
-    name: "/message.Gate2Center/HeartBeat",
+    name: "/protocol.Gate2Center/HeartBeat",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
     resp_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
 };
@@ -156,14 +156,14 @@ pub fn create_gate2_center<S: Gate2Center + Send + Clone + 'static>(s: S) -> ::g
 
 const METHOD_CENTER2_GATE_CENTER2_GATE_MESSAGE: ::grpcio::Method<super::center::Center2GateReq, super::center::Center2GateAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
-    name: "/message.Center2Gate/Center2GateMessage",
+    name: "/protocol.Center2Gate/Center2GateMessage",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
     resp_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
 };
 
 const METHOD_CENTER2_GATE_KICK_USERS: ::grpcio::Method<super::center::CenterKickUserReq, super::center::CenterKickUserAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
-    name: "/message.Center2Gate/KickUsers",
+    name: "/protocol.Center2Gate/KickUsers",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
     resp_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
 };

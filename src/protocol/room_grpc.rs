@@ -20,7 +20,7 @@
 
 const METHOD_GATE2_ROOM_GATE2_ROOM_MESSAGE: ::grpcio::Method<super::room::Gate2RoomReq, super::room::Gate2RoomAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
-    name: "/message.Gate2Room/Gate2RoomMessage",
+    name: "/protocol.Gate2Room/Gate2RoomMessage",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
     resp_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
 };
@@ -72,7 +72,7 @@ pub fn create_gate2_room<S: Gate2Room + Send + Clone + 'static>(s: S) -> ::grpci
 
 const METHOD_ROOM2_GATE_ROOM2_GATE_MESSAGE: ::grpcio::Method<super::room::Room2GateReq, super::room::Room2GateAck> = ::grpcio::Method {
     ty: ::grpcio::MethodType::Unary,
-    name: "/message.Room2Gate/Room2GateMessage",
+    name: "/protocol.Room2Gate/Room2GateMessage",
     req_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
     resp_mar: ::grpcio::Marshaller { ser: ::grpcio::pb_ser, de: ::grpcio::pb_de },
 };

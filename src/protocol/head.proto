@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package head;
+package protocol;
 // ---------------------公共头部
 message req_head {
   int32 cid = 1;

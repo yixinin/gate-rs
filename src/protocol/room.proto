@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package room;
+package protocol;
 
 service Gate2Room {
   rpc Gate2RoomMessage(Gate2RoomReq) returns (Gate2RoomAck); // 客户端-房间消息

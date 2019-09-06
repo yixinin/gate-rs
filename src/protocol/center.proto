@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package center;
+package protocol;
 
 import "head.proto";
 
@@ -22,35 +22,35 @@ message Gate2CenterAck {
 }
 
 message LoginReq {
-  head.req_head head = 1; // token
-  int64 username = 2;     //用户名
-  string password = 3;    //密码
-  string verify_code = 4; //验证码
-  int32 login_type = 5;   //登录类型
-  string nickname = 6;    //昵称
-  string avatar = 7;      //头像
-  string invite_code = 8; //邀请码
-  string extra = 9;       //扩展字段
+  protocol.req_head head = 1; // token
+  int64 username = 2;         //用户名
+  string password = 3;        //密码
+  string verify_code = 4;     //验证码
+  int32 login_type = 5;       //登录类型
+  string nickname = 6;        //昵称
+  string avatar = 7;          //头像
+  string invite_code = 8;     //邀请码
+  string extra = 9;           //扩展字段
 }
 
 message LoginAck {
-  head.ack_head head = 1; // token
+  protocol.ack_head head = 1; // token
 }
 
 message LogoutReq {
-  head.req_head head = 1; // token
+  protocol.req_head head = 1; // token
 }
 
 message LogoutAck {
-  head.ack_head head = 1; // token
+  protocol.ack_head head = 1; // token
 }
 
 message HeartBeatReq {
-  head.req_head head = 1; // token
+  protocol.req_head head = 1; // token
 }
 
 message HeartBeatAck {
-  head.ack_head head = 1; // token
+  protocol.ack_head head = 1; // token
 }
 
 service Center2Gate {
